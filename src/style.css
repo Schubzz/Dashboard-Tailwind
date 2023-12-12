@@ -1,0 +1,54 @@
+@import "color-palette.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--clr-text-light);
+    font-family: "PlusJakartaSans", sans-serif;
+    text-decoration: none;
+    border-style: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: url("./font/PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+.trans {
+    transition: left .5s;
+}
+
+.trans-visible {
+    transition: opacity 0.5s, visibility 0s linear 0.5s;
+}
+
+.aside-visible {
+    left: 0;
+}
+
+.backdrop-visible {
+    transition: opacity 0.5s, visibility 0s linear 0s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+.burger-hover:hover{
+    & span:nth-child(1) {
+        width: 20px;
+    }
+}
+
+.custom-border-radius {
+    border-radius: 5px 20px 5px 10px;
+}
